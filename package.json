@@ -1,0 +1,52 @@
+{
+  "name": "fd-lock-cli",
+  "version": "1.0.0",
+  "description": "Cli for cross-platform lock on a file using a file descriptor to it",
+  "keywords": [
+    "starter",
+    "cli",
+    "fd-lock"
+  ],
+  "main": "dist/cli.js",
+  "bin": {
+    "fd-lock": "dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "scripts": {
+    "lint": "tslint --project tsconfig.json -t codeFrame 'src/**/*.ts' 'test/**/*.ts'",
+    "prepublish": "yarn build",
+    "lint:fix": "yarn lint --fix",
+    "build": "rollup -c rollup.config.ts",
+    "start": "rollup -c rollup.config.ts -w",
+    "cli:test": "node dist/cli"
+  },
+  "devDependencies": {
+    "@types/chalk": "^2.2.0",
+    "@types/find-up": "^2.1.1",
+    "@types/node": "^11.11.0",
+    "cross-env": "^5.2.0",
+    "npx": "^10.2.0",
+    "prettier": "^1.15.3",
+    "rollup": "^1.1.0",
+    "rollup-plugin-json": "^3.1.0",
+    "rollup-plugin-terser": "^4.0.2",
+    "rollup-plugin-typescript2": "^0.18.1",
+    "tslint": "^5.12.1",
+    "tslint-config-prettier": "^1.17.0",
+    "tslint-config-standard": "^8.0.1",
+    "tslint-plugin-prettier": "^2.0.1",
+    "typescript": "^3.2.2"
+  },
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "commander": "^2.19.0",
+    "fd-lock": "^1.0.2",
+    "find-up": "^3.0.0"
+  }
+}
